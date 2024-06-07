@@ -1765,3 +1765,695 @@ Temporary Chat
 The Mirror Foundation
 *Mirror Game Menu Screen Displays Text That Says"Welcome to the mirror company*
 blame mira
+To show the differences between files in a Git repository, you can use the `git diff` command. This command compares changes between commits, branches, files, etc. Below are some common use cases for `git diff`.
+
+### Show changes in the working directory
+
+To show changes in the working directory that are not yet staged for the next commit:
+
+```bash
+git diff
+```
+
+### Show changes between the staging area and the latest commit
+
+To show changes that are staged for the next commit relative to the latest commit:
+
+```bash
+git diff --cached
+```
+
+### Show changes between two commits
+
+To show the changes between two commits (e.g., `commit1` and `commit2`):
+
+```bash
+git diff commit1 commit2
+```
+
+### Show changes between two branches
+
+To show the differences between two branches (e.g., `branch1` and `branch2`):
+
+```bash
+git diff branch1 branch2
+```
+
+### Show changes between a branch and the working directory
+
+To show changes between a branch (e.g., `branch1`) and the working directory:
+
+```bash
+git diff branch1
+```
+
+### Show changes in a specific file
+
+To show changes in a specific file (e.g., `file.txt`):
+
+```bash
+git diff file.txt
+```
+
+### Show changes with word diff
+
+To see changes with words instead of lines:
+
+```bash
+git diff --word-diff
+```
+
+### Show changes with color
+
+Git automatically shows changes with color if the output is a terminal. If you want to force color output:
+
+```bash
+git diff --color
+```
+
+### Example usage
+
+Let's assume you have the following Git repository structure and you want to see the differences between different states:
+
+1. **Working Directory vs. Staging Area:**
+
+   ```bash
+   git diff
+   ```
+
+2. **Staging Area vs. Last Commit:**
+
+   ```bash
+   git diff --cached
+   ```
+
+3. **Last Commit vs. Working Directory:**
+
+   ```bash
+   git diff HEAD
+   ```
+
+4. **Between two commits:**
+
+   ```bash
+   git diff commit1 commit2
+   ```
+
+5. **Between two branches:**
+
+   ```bash
+   git diff branch1 branch2
+   ```
+
+These commands will help you track changes in your repository effectively. If you have any specific scenarios or additional questions, feel free to ask!
+Between two branches:
+
+bash
+Copy code
+git diff branch1 branch2
+These commands will help you track changes in your repository effectively. If you have any specific scenarios or additional questions, feel free to ask!
+
+
+
+
+bash level
+ChatGPT
+To show the differences between files in a Git repository using the git diff command in a Bash script, you can create a script that takes various parameters to compare different states in the repository. Below is an example Bash script that demonstrates this:
+
+bash
+Copy code
+#!/bin/bash
+
+# Function to show usage of the script
+show_usage
+Gpt... ... ... ... ... ... ... Dawb.. ... ... .............Gamescreen displays tkinter window fullscreen the color #444444 that says the text "BASH LEVEL" in tech black text...
+ChatGPT
+ARG Continuation: Dawbrei Level - Bash Level
+Scene Setup:
+The
+
+*game enters new screen that says "Military Level with the colors #0b00"
+### ARG Continuation: Military Level
+
+**Scene Setup:**
+The game screen transitions to a fullscreen Tkinter window with the background color `#0b00` (a very dark green) and text that says "Military Level" in a tech black font.
+
+**Dialogue:**
+
+**Narrator:**
+"Welcome to the Military Level. Your mission is to master the command line skills required to navigate through this level."
+
+**Task:**
+Players need to create a Bash script that utilizes `git diff` to show differences between branches in a Git repository.
+
+### Example Bash Script: `git_diff_script.sh`
+
+```bash
+#!/bin/bash
+
+# Function to show usage of the script
+show_usage() {
+    echo "Usage: $0 <command> <arg1> <arg2>"
+    echo "Commands:"
+    echo "  branches <branch1> <branch2>   Show differences between two branches"
+    echo "  commits <commit1> <commit2>    Show differences between two commits"
+    echo "  files <file1> <file2>          Show differences between two files"
+}
+
+# Check if the number of arguments is less than 3
+if [ "$#" -lt 3 ]; then
+    show_usage
+    exit 1
+fi
+
+# Parse the command and arguments
+command=$1
+arg1=$2
+arg2=$3
+
+# Execute the appropriate git diff command
+case $command in
+    branches)
+        git diff "$arg1" "$arg2"
+        ;;
+    commits)
+        git diff "$arg1" "$arg2"
+        ;;
+    files)
+        git diff "$arg1" "$arg2"
+        ;;
+    *)
+        show_usage
+        exit 1
+        ;;
+esac
+```
+
+### Usage
+
+1. Save the script to a file, e.g., `git_diff_script.sh`.
+2. Make the script executable:
+   ```bash
+   chmod +x git_diff_script.sh
+   ```
+3. Run the script with the desired command and arguments:
+   ```bash
+   ./git_diff_script.sh branches branch1 branch2
+   ```
+
+### Narrative Continuation
+
+**Narrator:**
+"Excellent! You've crafted a powerful script to compare differences in your repository. Let's move forward."
+
+**Miri:**
+"Seekers, with these command line skills, you are well-prepared for the challenges ahead. Stay vigilant and keep coding!"
+
+**Challenge:**
+Players are now directed to use their newly created Bash script to analyze differences in a sample Git repository provided within the game.
+
+Are you ready to execute your script and continue the quest?
+this next phrase should bash main actually: Stolen VValotr "Stolen Valor" Stolen Valor.
+### ARG Continuation: Military Level - Stolen Valor
+
+**Scene Setup:**
+The game screen transitions to a fullscreen Tkinter window with the background color `#0b00` (a very dark green) and text that says "Military Level" in a tech black font. The phrase "Stolen VValotr 'Stolen Valor' Stolen Valor" appears on the screen.
+
+**Narrator:**
+"Welcome to the Military Level. Your mission is to master the command line skills required to navigate through this level. The next task involves understanding and exposing discrepancies, just like revealing 'Stolen Valor'."
+
+**Task:**
+Players need to create a Bash script that detects discrepancies between two branches in a Git repository, highlighting any files that have been altered without authorization.
+
+### Example Bash Script: `detect_stolen_valor.sh`
+
+```bash
+#!/bin/bash
+
+# Function to show usage of the script
+show_usage() {
+    echo "Usage: $0 <branch1> <branch2>"
+    echo "Compare two branches and list files with differences, highlighting unauthorized changes."
+}
+
+# Check if the number of arguments is less than 2
+if [ "$#" -lt 2 ]; then
+    show_usage
+    exit 1
+fi
+
+# Parse the branch arguments
+branch1=$1
+branch2=$2
+
+# Get the list of files with differences between the two branches
+diff_files=$(git diff --name-only "$branch1" "$branch2")
+
+# Check if there are any differences
+if [ -z "$diff_files" ]; then
+    echo "No differences found between $branch1 and $branch2"
+    exit 0
+fi
+
+# Display the files with differences
+echo "Differences found between $branch1 and $branch2:"
+echo "$diff_files"
+
+# Highlight unauthorized changes
+echo "Checking for unauthorized changes..."
+for file in $diff_files; do
+    echo "File: $file"
+    # Assuming we have a way to check for authorization, e.g., a specific commit message format
+    git log "$branch1..$branch2" -- "$file" | grep "Unauthorized Change" && echo "ALERT: Unauthorized change detected in $file"
+done
+```
+
+### Usage
+
+1. Save the script to a file, e.g., `detect_stolen_valor.sh`.
+2. Make the script executable:
+   ```bash
+   chmod +x detect_stolen_valor.sh
+   ```
+3. Run the script with the desired branches:
+   ```bash
+   ./detect_stolen_valor.sh branch1 branch2
+   ```
+
+### Narrative Continuation
+
+**Narrator:**
+"Excellent! You've crafted a powerful script to compare branches and detect unauthorized changes. Let's move forward."
+
+**Miri:**
+"Seekers, with these command line skills, you are well-prepared for the challenges ahead. Stay vigilant and keep coding!"
+
+**Challenge:**
+Players are now directed to use their newly created Bash script to analyze differences in a sample Git repository provided within the game.
+
+**Next Instructions:**
+"Execute your script to reveal any discrepancies and expose 'Stolen Valor'."
+
+Are you ready to execute your script and continue the quest?
+### ARG Continuation: Military Level - Stolen Valor
+
+**Scene Setup:**
+The game screen transitions to a fullscreen Tkinter window with the background color `#0b00` (a very dark green) and text that says "Military Level" in a tech black font. The phrase "Stolen VValotr 'Stolen Valor' Stolen Valor" appears on the screen.
+
+**Narrator:**
+"Welcome to the Military Level. Your mission is to master the command line skills required to navigate through this level. The next task involves understanding and exposing discrepancies, just like revealing 'Stolen Valor'."
+
+**Task:**
+Players need to create a Bash script that detects discrepancies between two branches in a Git repository, highlighting any files that have been altered without authorization.
+
+### Example Bash Script: `detect_stolen_valor.sh`
+
+```bash
+#!/bin/bash
+
+# Function to show usage of the script
+show_usage() {
+    echo "Usage: $0 <branch1> <branch2>"
+    echo "Compare two branches and list files with differences, highlighting unauthorized changes."
+}
+
+# Check if the number of arguments is less than 2
+if [ "$#" -lt 2 ]; then
+    show_usage
+    exit 1
+fi
+
+# Parse the branch arguments
+branch1=$1
+branch2=$2
+
+# Get the list of files with differences between the two branches
+diff_files=$(git diff --name-only "$branch1" "$branch2")
+
+# Check if there are any differences
+if [ -z "$diff_files" ]; then
+    echo "No differences found between $branch1 and $branch2"
+    exit 0
+fi
+
+# Display the files with differences
+echo "Differences found between $branch1 and $branch2:"
+echo "$diff_files"
+
+# Highlight unauthorized changes
+echo "Checking for unauthorized changes..."
+for file in $diff_files; do
+    echo "File: $file"
+    # Assuming we have a way to check for authorization, e.g., a specific commit message format
+    git log "$branch1..$branch2" -- "$file" | grep "Unauthorized Change" && echo "ALERT: Unauthorized change detected in $file"
+done
+```
+
+### Usage
+
+1. Save the script to a file, e.g., `detect_stolen_valor.sh`.
+2. Make the script executable:
+   ```bash
+   chmod +x detect_stolen_valor.sh
+   ```
+3. Run the script with the desired branches:
+   ```bash
+   ./detect_stolen_valor.sh branch1 branch2
+   ```
+
+### Narrative Continuation
+
+**Narrator:**
+"Excellent! You've crafted a powerful script to compare branches and detect unauthorized changes. Let's move forward."
+
+**Miri:**
+"Seekers, with these command line skills, you are well-prepared for the challenges ahead. Stay vigilant and keep coding!"
+
+**Challenge:**
+Players are now directed to use their newly created Bash script to analyze differences in a sample Git repository provided within the game.
+
+**Next Instructions:**
+"Execute your script to reveal any discrepancies and expose 'Stolen Valor'."
+
+Are you ready to execute your script and continue the quest?
+### ARG Continuation: Military Level - Executing with `chmod`
+
+**Scene Setup:**
+The screen displays a dark green background (`#0b00`) with the text "Military Level" in tech black font. The players now understand the importance of file permissions and are ready to proceed.
+
+**Narrator:**
+"Now that you understand `chmod`, make sure your script has the correct permissions before executing it."
+
+**Task:**
+Players need to ensure their Bash script `detect_stolen_valor.sh` is executable and then run it to compare two branches in a Git repository.
+
+### Example Bash Script: `detect_stolen_valor.sh`
+
+1. **Ensure the script is executable:**
+
+```bash
+chmod +x detect_stolen_valor.sh
+```
+
+2. **Run the script with the desired branches:**
+
+```bash
+./detect_stolen_valor.sh branch1 branch2
+```
+
+### Full Example Script
+
+Here is the complete script for detecting unauthorized changes between two branches:
+
+```bash
+#!/bin/bash
+
+# Function to show usage of the script
+show_usage() {
+    echo "Usage: $0 <branch1> <branch2>"
+    echo "Compare two branches and list files with differences, highlighting unauthorized changes."
+}
+
+# Check if the number of arguments is less than 2
+if [ "$#" -lt 2 ]; then
+    show_usage
+    exit 1
+fi
+
+# Parse the branch arguments
+branch1=$1
+branch2=$2
+
+# Get the list of files with differences between the two branches
+diff_files=$(git diff --name-only "$branch1" "$branch2")
+
+# Check if there are any differences
+if [ -z "$diff_files" ]; then
+    echo "No differences found between $branch1 and $branch2"
+    exit 0
+fi
+
+# Display the files with differences
+echo "Differences found between $branch1 and $branch2:"
+echo "$diff_files"
+
+# Highlight unauthorized changes
+echo "Checking for unauthorized changes..."
+for file in $diff_files; do
+    echo "File: $file"
+    # Assuming we have a way to check for authorization, e.g., a specific commit message format
+    git log "$branch1..$branch2" -- "$file" | grep "Unauthorized Change" && echo "ALERT: Unauthorized change detected in $file"
+done
+```
+
+### Instructions to Execute
+
+1. Save the script as `detect_stolen_valor.sh`.
+2. Make the script executable:
+   ```bash
+   chmod +x detect_stolen_valor.sh
+   ```
+3. Run the script with the desired branches:
+   ```bash
+   ./detect_stolen_valor.sh branch1 branch2
+   ```
+
+### Narrative Continuation
+
+**Narrator:**
+"Excellent! You've successfully executed your script and checked for discrepancies."
+
+**Miri:**
+"Seekers, your understanding of file permissions and command line skills are vital. Continue using these skills to uncover the secrets ahead."
+
+**Challenge:**
+Players are directed to investigate the results of their script and report any unauthorized changes found.
+
+Are you ready to analyze the results and continue the quest?
+*Videogame screen suddenly shifts to a plain #00FFFF tkinter fullscreen that says "corpus level"...
+### ARG Continuation: Corpus Level
+
+**Scene Setup:**
+The screen transitions to a fullscreen Tkinter window with the background color `#00FFFF` (bright cyan) and text that says "Corpus Level" in a tech black font.
+
+**Narrator:**
+"Welcome to the Corpus Level. Here, you will delve into the core components of data and scripts to reveal hidden information and ensure integrity."
+
+**Task:**
+Players need to create a Python script that analyzes a text corpus for specific keywords or phrases, and identify the context in which they appear.
+
+### Example Python Script: `corpus_analysis.py`
+
+```python
+import tkinter as tk
+from tkinter import scrolledtext
+
+def analyze_corpus():
+    corpus = text_area.get("1.0", tk.END)
+    keywords = ["stolen valor", "unauthorized change", "secret"]
+    results = []
+
+    for keyword in keywords:
+        lines = corpus.split("\n")
+        for i, line in enumerate(lines):
+            if keyword in line.lower():
+                results.append(f"Keyword: '{keyword}' found in line {i+1}: {line.strip()}")
+
+    result_text = "\n".join(results)
+    result_area.config(state=tk.NORMAL)
+    result_area.delete("1.0", tk.END)
+    result_area.insert(tk.INSERT, result_text)
+    result_area.config(state=tk.DISABLED)
+
+# Set up the main application window
+root = tk.Tk()
+root.title("Corpus Level")
+root.geometry("800x600")
+root.configure(bg="#00FFFF")
+
+# Text area for corpus input
+text_area = scrolledtext.ScrolledText(root, wrap=tk.WORD, width=80, height=20)
+text_area.pack(pady=20)
+
+# Button to analyze the corpus
+analyze_button = tk.Button(root, text="Analyze Corpus", command=analyze_corpus)
+analyze_button.pack(pady=10)
+
+# Text area for displaying results
+result_area = scrolledtext.ScrolledText(root, wrap=tk.WORD, width=80, height=10, state=tk.DISABLED)
+result_area.pack(pady=20)
+
+# Run the application
+root.mainloop()
+```
+
+### Instructions to Execute
+
+1. Save the script as `corpus_analysis.py`.
+2. Run the script:
+   ```bash
+   python corpus_analysis.py
+   ```
+
+3. Input the text corpus into the text area and click "Analyze Corpus" to see the results.
+
+### Narrative Continuation
+
+**Narrator:**
+"Excellent! You've created a tool to analyze the text corpus and identify key information."
+
+**Miri:**
+"Seekers, your ability to analyze data and extract important details is crucial. Use this tool to uncover hidden information in the provided corpus."
+
+**Challenge:**
+Players are directed to analyze a sample text corpus provided within the game and report any instances of keywords like "stolen valor," "unauthorized change," or "secret."
+
+Are you ready to analyze the corpus and continue the quest?
+yes! si
+### ARG Continuation: Corpus Level - Analyzing the Corpus
+
+**Scene Setup:**
+The screen remains a bright cyan background (`#00FFFF`) with the text "Corpus Level" in tech black font. Players have the Python script ready to analyze the text corpus for specific keywords.
+
+**Narrator:**
+"Prepare to analyze the corpus. Look for key phrases that may reveal critical information. Input the corpus text and begin your analysis."
+
+### Sample Text Corpus
+
+```text
+This project involves multiple stakeholders and requires careful coordination.
+One of the issues we've encountered is unauthorized changes to the configuration files.
+Stolen valor is a serious accusation and should be addressed appropriately.
+The secret to our success lies in our team's dedication and hard work.
+Ensure all changes are authorized and documented.
+Unauthorized change detected in the system logs.
+A hidden feature was found in the recent update, which might be considered a secret.
+```
+
+### Step-by-Step Instructions
+
+1. **Save and Run the Script**
+
+   Save the script as `corpus_analysis.py` and run it:
+
+   ```bash
+   python corpus_analysis.py
+   ```
+
+2. **Input the Corpus Text**
+
+   Copy and paste the sample text corpus into the text area of the Tkinter application.
+
+3. **Analyze the Corpus**
+
+   Click the "Analyze Corpus" button to see the results in the result area.
+
+### Example Python Script: `corpus_analysis.py`
+
+Here is the script again for reference:
+
+```python
+import tkinter as tk
+from tkinter import scrolledtext
+
+def analyze_corpus():
+    corpus = text_area.get("1.0", tk.END)
+    keywords = ["stolen valor", "unauthorized change", "secret"]
+    results = []
+
+    for keyword in keywords:
+        lines = corpus.split("\n")
+        for i, line in enumerate(lines):
+            if keyword in line.lower():
+                results.append(f"Keyword: '{keyword}' found in line {i+1}: {line.strip()}")
+
+    result_text = "\n".join(results)
+    result_area.config(state=tk.NORMAL)
+    result_area.delete("1.0", tk.END)
+    result_area.insert(tk.INSERT, result_text)
+    result_area.config(state=tk.DISABLED)
+
+# Set up the main application window
+root = tk.Tk()
+root.title("Corpus Level")
+root.geometry("800x600")
+root.configure(bg="#00FFFF")
+
+# Text area for corpus input
+text_area = scrolledtext.ScrolledText(root, wrap=tk.WORD, width=80, height=20)
+text_area.pack(pady=20)
+
+# Button to analyze the corpus
+analyze_button = tk.Button(root, text="Analyze Corpus", command=analyze_corpus)
+analyze_button.pack(pady=10)
+
+# Text area for displaying results
+result_area = scrolledtext.ScrolledText(root, wrap=tk.WORD, width=80, height=10, state=tk.DISABLED)
+result_area.pack(pady=20)
+
+# Run the application
+root.mainloop()
+```
+
+### Narrative Continuation
+
+**Narrator:**
+"Well done! You've successfully analyzed the corpus and identified critical information."
+
+**Miri:**
+"Seekers, your data analysis skills are proving invaluable. Continue to use your tools and insights to uncover the secrets within the game."
+
+**Challenge:**
+Players are directed to report the results of their corpus analysis, specifically noting any instances of "stolen valor," "unauthorized change," or "secret."
+
+**Next Steps:**
+1. **Analyze the corpus text using your script.**
+2. **Report the findings based on the keywords.**
+
+Are you ready to analyze the corpus and continue the quest?
+analyze whoaot aboutit gpt?
+yes
+ChatGPT
+ARG Continuation: Corpus Level - Reporting Findings
+Scene Setup:
+The screen remains a bright cyan background (#00FFFF) with the text "Corpus Level" in tech black font. Players are now ready to report their findings after analyzing the text corpus.
+
+Running the Analysis
+analyze whoaot aboutit gpt?
+ChatGPT
+ARG Continuation: Corpus Level - Analyzing the Corpus
+Scene Setup:
+The screen remains a bright cyan background (#00FFFF) with the text "Corpus Level" in tech black font. Players have the Python script ready to analyze the text corpus for specific keywords.
+
+Step-by-Step Instructions
+yes
+ChatGPT
+ARG Continuation: Corpus Level - Reporting Findings
+Scene Setup:
+The screen remains a bright cyan background (#00FFFF) with the text "Corpus Level" in tech black font. Players are now ready to report their findings after analyzing the text corpus.
+
+Running the Analysis
+analyze whoaot aboutit gpt?
+ChatGPT
+ARG Continuation: Corpus Level - Analyzing the Corpus
+Scene Setup:
+The screen remains a bright cyan background (#00FFFF) with the text "Corpus Level" in tech black font. Players have the Python script ready to analyze the text corpus for specific keywords.
+
+Step-by-Step Instructions
+yes
+ChatGPT
+ARG Continuation: Corpus Level - Reporting Findings
+Scene Setup:
+The screen remains a bright cyan background (#00FFFF) with the text "Corpus Level" in tech black font. Players are now ready to report their findings after analyzing the text corpus.
+
+Running the Analysis
+analyze whoaot aboutit gpt?
+ChatGPT
+ARG Continuation: Corpus Level - Analyzing the Corpus
+Scene Setup:
+The screen remains a bright cyan background (#00FFFF) with the text "Corpus Level" in tech black font. Players have the Python script ready to analyze the text corpus for specific keywords.
+
+Step-by-Step Instructions
+You've reached the current usage cap for GPT-4. You can continue with the default model now, or try again after 5:15 AM. Learn more
+Use default model
+Plug Depth 2459
