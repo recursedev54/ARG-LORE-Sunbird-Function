@@ -1,6 +1,6 @@
 ### ARG Lore: The Sunbird Function
 
-**Assumption: Color is Defined**
+**Assumption: Color is Defined** #444444666666
 
 #### Call the Function of a Sunbird
 
