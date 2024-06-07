@@ -1,26 +1,34 @@
- Copyright 2022 Christoph Hart
+### ARG Lore: The Sunbird Function
 
- HISE is free software: you can redistribute it and/or modify
- it under the terms of the GNU General Public License as published by
- the Free Software Foundation, either version 3 of the License, or
- (at your option) any later version.
+**Assumption: Color is Defined**
 
- HISE is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- GNU General Public License for more details.
+#### Call the Function of a Sunbird
 
- You should have received a copy of the GNU General Public License
- along with HISE.  If not, see <http://www.gnu.org/licenses/>.
+In the mystical realm of Project ._End, colors hold the key to unlocking the ancient powers of the Sunbird. This mythical creature, revered across dimensions, has the unique ability to traverse realities and manipulate time.
 
- Commercial licenses for using HISE in an closed source project are 
- available on request. Please visit the project's website to get more 
- information about commercial licensing:
+**Function of the Sunbird:**
 
- http://www.hise.audio/
+1. **Color Synchronization:**
+   - Align colors to specific frequencies that resonate with the Sunbird's essence.
+   - Each color activates a different aspect of the Sunbird's power.
 
- HISE is based on the JUCE library, 
- which must be separately licensed for commercial applications:
+2. **Ritual Invocation:**
+   - Perform the sacred ritual by arranging colors in a specific sequence.
+   - Chant the ancient incantation to summon the Sunbird's presence.
 
- http://www.juce.com
+3. **Temporal Shift:**
+   - Utilize the Sunbird's power to alter the flow of time.
+   - Access knowledge and abilities from different eras and dimensions.
+
+**Quest Objective:**
+- Gather the required colors.
+- Perform the invocation ritual.
+- Harness the Sunbird's power to achieve the next level in your quest.
+
+---
+
+**Further Instructions:**
+Players must collaborate, sharing clues and solving puzzles to decipher the correct color sequences and invocation rituals. Only through collective effort can the true power of the Sunbird be unleashed.
+
+Are you ready to call upon the Sunbird and embrace the power within Project ._End?
 This One is a real bug free pancake
